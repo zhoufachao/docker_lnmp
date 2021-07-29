@@ -50,13 +50,13 @@ services:
       - ../data/mysql:/var/lib/mysql
       - ../logs/mysql:/var/lib/mysql-logs:rw
       - ./mysql/conf.d:/etc/mysql/conf.d:ro
-  redis-db:
-    build: ./redis
-    ports:
-      - "6379:6379"
-    volumes:
-      - ../data/redis:/data
-    restart: always
+#  redis-db:
+#    build: ./redis
+#    ports:
+#      - "6379:6379"
+#    volumes:
+#      - ../data/redis:/data
+#    restart: always
 networks:
   #创建了一个自定义的网络叫做default
   default:
